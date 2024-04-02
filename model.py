@@ -286,7 +286,7 @@ model_paths = {
 
 
 @register_model
-def base(ratio, pretrained=False, imsize=33, dephts=[1, 1, 3, 1], dims=[32, 64, 128, 256]):
+def base(ratio, pretrained=False, imsize=33, dephts=[1, 1, 3, 1], dims=[32, 64, 128, 256], **kwargs):
     model = NesTDNet(ratio, imsize, dephts, dims)
     if pretrained:
         s_ratio = str(int(ratio*100))
@@ -296,7 +296,7 @@ def base(ratio, pretrained=False, imsize=33, dephts=[1, 1, 3, 1], dims=[32, 64, 
     return model
 
 @register_model
-def tiny(ratio, pretrained=False, imsize=33, dephts=[1, 1, 3, 1], dims=[16, 32, 64, 128]):
+def tiny(ratio, pretrained=False, imsize=33, dephts=[1, 1, 3, 1], dims=[16, 32, 64, 128], **kwargs):
     model = NesTDNet(ratio, imsize, dephts, dims)
     if pretrained:
         s_ratio = str(int(ratio*100))
@@ -306,7 +306,7 @@ def tiny(ratio, pretrained=False, imsize=33, dephts=[1, 1, 3, 1], dims=[16, 32, 
     return model
 
 @register_model
-def xbase(ratio, pretrained=False, imsize=33, dephts=[1, 1, 3, 1], dims=[48, 96, 192, 384]):
+def xbase(ratio, pretrained=False, imsize=33, dephts=[1, 1, 3, 1], dims=[48, 96, 192, 384], **kwargs):
     model = NesTDNet(ratio, imsize, dephts, dims)
     if pretrained:
         s_ratio = str(int(ratio*100))
@@ -316,7 +316,7 @@ def xbase(ratio, pretrained=False, imsize=33, dephts=[1, 1, 3, 1], dims=[48, 96,
     return model
 
 @register_model
-def large(ratio, pretrained=False, imsize=33, dephts=[2, 2, 6, 2], dims=[32, 64, 128, 256]):
+def large(ratio, pretrained=False, imsize=33, dephts=[2, 2, 6, 2], dims=[32, 64, 128, 256], **kwargs):
     model = NesTDNet(ratio, imsize, dephts, dims)
     if pretrained:
         s_ratio = str(int(ratio*100))
