@@ -3,7 +3,7 @@
 
 python train.py --model="base" --cs_ratio=10 --batch_size=8 --blr=1e-4 --min_lr=1e-6 --epochs=200 --warmup_epochs=20 --train_folder="./data/train/" --val_folder="./data/val/" --image_size=132 --use_amp=True
 
-11111111
+111111111
 Model will be saved in the saved_models folder, and log will be saved in the logs folder.
 
 ## Test
